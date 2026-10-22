@@ -4,7 +4,7 @@ export default function Board() {
 
   const [squares, setSquares] = useState(Array(9).fill(null))
 
-  function handleCLick() {
+  function handleClick() {
     const nextSquares = squares.slice();
     nextSquares[0] = "X";
     setSquares(nextSquares);
@@ -34,7 +34,7 @@ export default function Board() {
 function Square({value, onSquareClick}) {
 
   return (
-    <button className='square' onClick="onSquareClick">
+    <button className='square' onClick={onSquareClick}>
         {value}
     </button>
   );
