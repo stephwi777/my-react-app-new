@@ -1,5 +1,14 @@
 import { useState } from 'react';
 
+function Square({value, onSquareClick}) {
+
+  return (
+    <button className='square' onClick={onSquareClick}>
+        {value}
+    </button>
+  );
+}
+
 export default function Board() {
 
   const [xIsNext, setXIsNext] = useState(true);
@@ -34,14 +43,5 @@ export default function Board() {
       <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
     </div>
     </>
-  );
-}
-
-function Square({value, onSquareClick}) {
-
-  return (
-    <button className='square' onClick={onSquareClick}>
-        {value}
-    </button>
   );
 }
